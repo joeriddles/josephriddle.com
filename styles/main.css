@@ -1,6 +1,16 @@
 html {
+    padding: 20px 20px 20px 20px;
     font-family: Work Sans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
     color: grey;
+}
+
+h1 {
+    font-weight: inherit;
+}
+
+body {
+    line-height: 1.8;
 }
 
 a {
@@ -12,7 +22,6 @@ a {
 
 .topnav {
     float: right;
-    padding-right: 20px;
 }
 
 .div-header{
@@ -23,17 +32,21 @@ a {
     color: #CC9933;
 }
 
-.active {
+.menuitem:hover {
+    color: #CC9933;
+}
+
+.menuitem-active {
     font-weight: bold;
 }
 
-#icon {
+.float {
     position: relative;
     top: 0;
     transition: top ease 0.2s;
 }
 
-#icon:hover {
+.float:hover {
     cursor: pointer;
     top: -2px;
 }
