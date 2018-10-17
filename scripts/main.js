@@ -1,1 +1,3 @@
-$('#icon').on
+$('#icon').on('click', function() {
+    window.location = "./index.html";
+});
