@@ -1,3 +1,3 @@
-$('#site-icon').click(function() {
+$('.site-icon').click(function() {
     window.location = "./index.html";
 });
