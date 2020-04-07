@@ -1,71 +1,35 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <title>Joseph Riddle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600" rel="stylesheet">
-    <link rel="icon" href="./images/icon.ico" sizes="128x128">
-    <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="Happy Birthday nerd">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
 </head>
+
 <body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
+    <script>
+        function clicked() {
+            var myCanvas = document.getElementById('canvas');
 
-    <div class="topnav">
-        <a class="menuitem float" href="https://github.com/joeriddles" target="_blank">GitHub</a>
-        <a class="menuitem float" href="./contact.html">Contact</a>
-    </div>
-    <img src="./images/icon.png" class="float site-icon" alt="Icon of the initials JR inside of an orange circle." width="100px" height="100px">
-    <h1>I'm Joseph Riddle, a <span class="highlight">student</span> and <span class="highlight">developer</span> living in Spokane, currently attending EWU.</h1>
-    <br>
-    <h1>Look, here's some neat little boxes</h1>
-    <div class="popup-card-container">
-        <div class="popup-card float">
-            <div class="popup-card-title">Look at this neat pop up</div>
-        </div>
-        <div class="popup-card float">
-            <div class="popup-card-title">And this one...</div>
-        </div>
-        <div class="popup-card float">
-            <div class="popup-card-title">And this one...</div>
-        </div>       
-        <div class="popup-card float">
-            <div class="popup-card-title">And this one...</div>
-        </div>
-        <div class="popup-card float">
-            <div class="popup-card-title">And this one...</div>
-        </div>
-        <div class="popup-card float">
-            <div class="popup-card-title">And this one...</div>
-        </div>
-        <div class="popup-card float">
-            <div class="popup-card-title">And this one...</div>
-        </div>       
-        <div class="popup-card float">
-            <div class="popup-card-title">And this one...</div>
-        </div>
-    </div>
-    <br>
-    <h1>Here's some hoverable boxes</h1>
-    <div style="padding: 0px 0px 0px 0px; margin: 0;">
-        <div class="hoverable-card float">
-            <h2>Look at this neat hoverable box.</h2>
-        </div>
-        <div class="hoverable-card float">
-            <h2>And this one...</h2>
-        </div>
-        <div class="hoverable-card float">
-            <h2>And this one...</h2>
-        </div>
-        <div class="hoverable-card float">
-            <h2>And this one...</h2>
-        </div>
-        <div class="hoverable-card float">
-            <h2>And this one...</h2>
-        </div>
-    </div>
+            var myConfetti = confetti.create(myCanvas, {
+                resize: true,
+                useWorker: true
+            });
+            myConfetti({
+                particleCount: 100,
+                spread: 160
+            });
+        }
+    </script>
+
+    <button #button1 onclick="clicked()">Click me!</button>
+    <canvas #canvas width="100%" height="100%"></canvas>
+    <h1>Happy Birthday Griffin!</h1>
 </body>
-
-<script src="./scripts/main.js"></script>
 
 </html>
